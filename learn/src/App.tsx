@@ -2,6 +2,7 @@ import Message from "./Message";
 import ListGroup from "./componenets/ListGroup";
 import "./App.css";
 import Alert from "./componenets/Alert";
+import Button from "./componenets/Button";
 
 function App() {
   const items = ["New York", "San franciso", "Tokyo", "London", "Paris"];
@@ -20,6 +21,7 @@ function App() {
       <Alert>
         Hello <span> World</span>
       </Alert>
+      <Button />
     </div>
   );
 }
