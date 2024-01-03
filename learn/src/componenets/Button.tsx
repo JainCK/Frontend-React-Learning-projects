@@ -1,7 +1,9 @@
-inter;
+interface Props {
+  children: string;
+}
 
-const Button = () => {
-  return <div className="btn btn-primary">Button</div>;
+const Button = ({ children }: Props) => {
+  return <div className="btn btn-primary">{children}</div>;
 };
 
 export default Button;
