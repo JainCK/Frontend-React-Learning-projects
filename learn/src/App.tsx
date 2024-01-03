@@ -3,9 +3,11 @@ import ListGroup from "./componenets/ListGroup";
 import "./App.css";
 import Alert from "./componenets/Alert";
 import Button from "./componenets/Button";
+import { useState } from "react";
 
 function App() {
   const items = ["New York", "San franciso", "Tokyo", "London", "Paris"];
+  const [alertVisible, setAlertVisible] = useState(false);
 
   const handleSelectItem = (item: String) => {
     console.log(item);
@@ -18,10 +20,8 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
-      <Alert>
-        Hello <span> World</span>
-      </Alert>
-      <Button onClick={() => console.log("Clicked")}>My Button</Button>
+      {alertVisible && <Alert>My Alert</Alert>}
+      <Button onClick={() => setAlertVisible(true)}>My Button</Button>
     </div>
   );
 }
