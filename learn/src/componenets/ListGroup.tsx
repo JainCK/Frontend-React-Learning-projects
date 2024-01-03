@@ -2,11 +2,12 @@
 interface Props {
   items: String[];
   heading: String;
+  onSelectItem: (item: String) => void;
 }
 
 import { useState } from "react";
 
-export default function ListGroup({ items, heading }: Props) {
+export default function ListGroup({ items, heading, onSelectItem }: Props) {
   //let selectedIndex = 0;
   //const handleClick = (event: MouseEvent) => console.log(event);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -23,7 +24,10 @@ export default function ListGroup({ items, heading }: Props) {
                 : "list-group-item"
             }
             key={item}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item);
+            }}
           >
             {item}
           </li>
