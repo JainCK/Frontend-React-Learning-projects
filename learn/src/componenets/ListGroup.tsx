@@ -1,4 +1,5 @@
 //import { MouseEvent } from "react";
+
 interface Props {
   items: String[];
   heading: String;
