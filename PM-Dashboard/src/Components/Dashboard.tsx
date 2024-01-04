@@ -5,26 +5,44 @@ import img3 from "../assets/_de375cbe-9950-44a2-b278-de026f42adbf.jpg";
 const Dashboard = () => {
   return (
     <div>
-      <div
-        id="carouselExampleRide"
-        className="carousel slide"
-        data-bs-ride="true"
-      >
+      <div id="carouselExampleIndicators" className="carousel slide">
+        <div className="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            className="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img1} className="d-block w-100" alt="..." />
+            <img src={img1} className="d-block w-100" alt="img1" />
           </div>
           <div className="carousel-item">
-            <img src={img2} className="d-block w-100" alt="..." />
+            <img src={img2} className="d-block w-100" alt="img2" />
           </div>
           <div className="carousel-item">
-            <img src={img3} className="d-block w-100" alt="..." />
+            <img src={img3} className="d-block w-100" alt="img3" />
           </div>
         </div>
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleRide"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
           <span
@@ -36,7 +54,7 @@ const Dashboard = () => {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleRide"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
           <span
