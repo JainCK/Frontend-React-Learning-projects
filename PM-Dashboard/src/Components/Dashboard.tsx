@@ -1,3 +1,7 @@
+import img1 from "../assets/_2395f9f8-78c7-43fb-b631-72d98bfc2756.jpg";
+import img2 from "../assets/_78c5676b-a19a-4b64-8e59-4cb9f020d41c.jpg";
+import img3 from "../assets/_de375cbe-9950-44a2-b278-de026f42adbf.jpg";
+
 const Dashboard = () => {
   return (
     <div>
@@ -8,13 +12,13 @@ const Dashboard = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img src={img1} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img src={img2} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img src={img3} className="d-block w-100" alt="..." />
           </div>
         </div>
         <button
