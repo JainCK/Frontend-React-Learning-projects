@@ -1,4 +1,5 @@
-
+import Dashboard from './Componenets/Dashboard'
+import Landing from './Componenets/Landing'
 import './App.css'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <>
-    Hello World
+    <Dashboard />
+    <Landing />
     </>
   )
 }
