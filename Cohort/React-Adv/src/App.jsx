@@ -7,12 +7,22 @@ function App() {
  
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/dashboard' element={Dashboard} />
-        <Route path='/' element={Landing} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <div>
+        <button onClick ={() => {
+            window.location.href = "/";
+        }}>Landing</button>
+        <button onClick ={() => {
+          window.location.href = "/dashboard";
+        }}>Dashboard</button>
+      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/' element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
