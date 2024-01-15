@@ -1,29 +1,35 @@
-import Dashboard from './Componenets/Dashboard'
-import Landing from './Componenets/Landing'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
 
-function App() {
- 
+const Dashboard = lazy(() => import('./Componenets/Dashboard') )
+const Landing = lazy (() => import('./Componenets/Landing' ))
 
+
+function App() {
   return (
     <div>
-      <div>
-        <button onClick ={() => {
-            window.location.href = "/";
-        }}>Landing</button>
-        <button onClick ={() => {
-          window.location.href = "/dashboard";
-        }}>Dashboard</button>
-      </div>
       <BrowserRouter>
+      <Appbar />
         <Routes>
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/' element={<Landing />} />
+          <Route path='/dashboard' element={<Suspense fallback= {"Loading..."}><Dashboard /></Suspense>} />
+          <Route path='/' element={<Suspense fallback= {"Loading..."}><Landing /></Suspense>} />
         </Routes>
       </BrowserRouter>
     </div>
   )
+}
+
+function Appbar() {
+  const navigate = useNavigate();
+  return <div>
+  <button onClick ={() => {
+      navigate('/');
+  }}>Landing</button>
+  <button onClick ={() => {
+    navigate("/dashboard");
+  }}>Dashboard</button>
+</div>
 }
 
 export default App
