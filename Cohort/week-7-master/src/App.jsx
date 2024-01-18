@@ -1,12 +1,11 @@
 import { useContext, useState } from "react"
 import { CountContext } from "./context";
-import { Navigate } from "react-router-dom";
+
 
 
 function App() {
   const [count, setCount] = useState(0);  
-  // wrap anyone that wants to use the teleported value inside a provider
-  // recoil, redux, Themes in mUI
+
   return (
     <div>
       <CountContext.Provider value={count}>
