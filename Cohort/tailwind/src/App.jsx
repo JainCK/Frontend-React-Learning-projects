@@ -5,7 +5,7 @@ import Phone from './components/Phone'
 
 
 function App() {
-  const [showOTP, setShowOTP] = useState(true);
+  const [showOTP, setShowOTP] = useState(false);
   return (
     <>
     {showOTP ? (
