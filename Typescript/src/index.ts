@@ -5,4 +5,10 @@
 
 // types 
 
-let level; //any type - avoid using any type as much as possible 
+// let level; //any type - avoid using any type as much as possible 
+
+// Array
+
+let number = [];  
+
+//  ts uses Pascalcase of enums , functions
