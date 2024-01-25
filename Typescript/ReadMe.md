@@ -7,3 +7,12 @@ Typescript concepts learned
 - how to use tsc compliler
 - use command tsc name.ts
 - basic configuration and complilation of ts config.
+
+Concepts learned :
+
+- The any type
+- Array
+- Tuples
+- Enums
+- Functions
+- objects
