@@ -2,19 +2,12 @@
 // if (age < 50 )
 // age += 10;
 // console.log(age);
-
 // types
-
 // let level; //any type - avoid using any type as much as possible
-
 // Array
-
 // let number = [];
-
 //  ts uses Pascalcase of enums , functions
-
-function greet(firstName: string) {
-  console.log("Hello" + firstName);
+function greet(firstName) {
+    console.log("Hello" + firstName);
 }
-
 greet("Jain");
