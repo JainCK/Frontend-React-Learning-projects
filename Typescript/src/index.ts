@@ -18,3 +18,7 @@ function greet(firstName: string) {
 }
 
 greet("Jain");
+
+function sum(a: number, b: number) {
+  return a + b;
+}

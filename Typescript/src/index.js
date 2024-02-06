@@ -8,6 +8,6 @@
 // let number = [];
 //  ts uses Pascalcase of enums , functions
 function greet(firstName) {
-    console.log("Hello" + firstName);
+  console.log("Hello" + firstName);
 }
 greet("Jain");
