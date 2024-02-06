@@ -1,5 +1,53 @@
-import { useState } from "react"
-import TodoApp from "./components/Todo";
+import React, { useState } from "react";
+
+function App() {
+  return (
+    <>
+      <MyComponent />
+    </>
+  );
+}
+
+//class componenet
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  incrementCount = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.count}</p>
+        <button onClick={this.incrementCount}>Increment</button>
+      </div>
+    );
+  }
+}
+
+// funtional componenets
+
+// function MyComponent() {
+//   const [count, setCount] = useState(0);
+
+//   const incrementCount = () => {
+//     setCount(count + 1);
+//   };
+
+//   return (
+//     <div>
+//       <p>{count}</p>
+//       <button onClick={incrementCount}>Increment</button>
+//     </div>
+//   );
+// }
+
+{
+  /* import TodoApp from "./components/Todo";
 import FetchTodo from "./components/FetchTodo";
 function App() {
   return (
@@ -38,5 +86,7 @@ function Header({title}) {
   </div>
 }
 
-export default App
+*/
+}
 
+export default App;
