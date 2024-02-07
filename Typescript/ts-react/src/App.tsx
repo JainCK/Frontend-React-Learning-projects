@@ -1,5 +1,11 @@
+import Index from "./Pages";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Index />
+    </>
+  );
 }
 
 export default App;
