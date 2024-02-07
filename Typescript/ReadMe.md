@@ -13,6 +13,7 @@ Concepts learned :
 - The any type
 - Array
 - Tuples
+- Genrics
 - Enums
 - Functions
 - objects
