@@ -1,12 +1,14 @@
-import axios from "axios";
+import client from "@/db";
 
 async function getUserDetails() {
-  await new Promise((r) => setTimeout(r, 2000));
   try {
-    const res = await axios.get("http://localhost:3000/api/data");
-    return res.data;
-  } catch (error) {
-    console.log(error);
+    const user = await client.user.findFirst({});
+    return {
+      name: user?.username,
+      email: user?.username,
+    };
+  } catch (e) {
+    console.log(e);
   }
 }
 
@@ -18,6 +20,7 @@ export default async function Home() {
       <div className="flex justify-center">
         <div className="border p-8 rounded">
           <div>Name: {userData?.name}</div>
+
           {userData?.email}
         </div>
       </div>
